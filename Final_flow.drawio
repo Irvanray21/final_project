@@ -32,6 +32,21 @@
         <mxCell id="81gL1InJ4I37fE2AfEwD-6" value="&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;DPO diinput kedalam database website&lt;/span&gt;&#xa;&#xa;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="40" y="840" width="150" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="81gL1InJ4I37fE2AfEwD-13" target="81gL1InJ4I37fE2AfEwD-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-34" value="Jika masih&lt;div&gt;belum ditemukan&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="81gL1InJ4I37fE2AfEwD-30">
+          <mxGeometry x="-0.0377" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-31" value="Jika sudah&lt;div&gt;ditemukan&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="81gL1InJ4I37fE2AfEwD-13" target="81gL1InJ4I37fE2AfEwD-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="443" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="81gL1InJ4I37fE2AfEwD-13" value="Database terbaru dari&lt;div&gt;DPO&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="520" y="410" width="170" height="65" as="geometry" />
         </mxCell>
@@ -63,6 +78,25 @@
         </mxCell>
         <mxCell id="81gL1InJ4I37fE2AfEwD-21" value="Asumsi POLSEK sudah&amp;nbsp;&lt;div&gt;mempunyai database sebelumnya&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
           <mxGeometry x="310" y="120" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="81gL1InJ4I37fE2AfEwD-28" target="81gL1InJ4I37fE2AfEwD-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="870" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="770" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-35" value="Update Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="81gL1InJ4I37fE2AfEwD-32">
+          <mxGeometry x="-0.2815" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-28" value="Data orang di DPO&lt;div&gt;akan diberi tanda&amp;nbsp;&lt;/div&gt;&lt;div&gt;dan akan segera dihilangkan dari website&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="592.5" width="160" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="81gL1InJ4I37fE2AfEwD-29" value="Data terbaru&amp;nbsp;&lt;br&gt;ditampilkan&lt;div&gt;di Website&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="820" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
