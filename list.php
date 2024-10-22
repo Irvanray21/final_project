@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
-                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
+                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="loo">
                 Kepolisian Indonesia
             </a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
