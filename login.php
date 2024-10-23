@@ -41,25 +41,32 @@
     <!-- Login form -->
 
     <div class="container-fluid">
-        <div class="card mt-5 p-5">
-            <div class="card-body">
-                <h1 style="text-align: center;">Silahkan Log-in</h1>
-                <div class="d-flex justify-content-center text-center">
-                    <form method="post">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="txt_username" id="username" placeholder="Username" autocomplete="off">
-                            <label for="username">Username</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="txt_password" id="password" placeholder="Password" autocomplete="off">
-                            <label for="password">Password</label>
-                        </div>
-                        <a href="#" class="btn btn-secondary border" type="submit">Log In</a>
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card my-5">
+                    <div class="card-body p-4 p-sm-5">
+                        <h5 class="card-title text-center mb-5 fw-bold">Silahkan Log-in Terlebih Dahulu</h5>
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="txt_username" placeholder="Username Disini">
+                                <label for="txt_username">Username Disini</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="txt_password" placeholder="Password Disini">
+                                <label for="txt_password">Password Disini</label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-login text-uppercase fw-bold" 
+                                type="submit">Login</button>
+                            </div>
+                    </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <!-- end of login form -->
 

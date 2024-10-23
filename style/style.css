@@ -31,6 +31,19 @@ body {
   position: relative;
 }
 
+thead, tbody{
+  text-align: center;
+}
+
+.col-sm-12 > h1{
+  text-align: center;
+  padding: 1%;
+}
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
 
 /* .custom-footer {
   background-color: #232f3a;
