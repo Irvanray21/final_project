@@ -1,5 +1,10 @@
 <?php
+require 'config.php';
 
+$data = myquery("SELECT a.id, a.nama, a.kejahatan, b.polsek, b.stat_org, b.tgl_cari
+From tb_orang as a
+JOIN tb_polsek as b
+ON b.polsek = b.id");
 
 
 ?>
@@ -63,19 +68,18 @@
                         </thead>
 
                         <tbody>
+                            <?php foreach ($data as $row): ?>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><?= $row['nama'] ?></td>
+                                    <td><?= $row['kejahatan'] ?></td>
+                                    <td><?= $row['polsek'] ?></td>
+                                    <td><?= $row['status'] ?></td>
+                                    <td><?= $row['tgl_cari'] ?></td>
 
-                            <tr>
-                                <th scope="row">1</th>
+                                </tr>
+                            <?php endforeach; ?>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-
-                            </tr>
                         </tbody>
                     </table>
                 </div>
