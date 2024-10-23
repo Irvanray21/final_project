@@ -1,10 +1,13 @@
 <?php
 require 'config.php';
 
-$data = myquery("SELECT a.id, a.nama, a.kejahatan, b.polsek, b.stat_org, b.tgl_cari
+$data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, b.polsek, c.stat
 From tb_orang as a
 JOIN tb_polsek as b
-ON b.polsek = b.id");
+ON a.domisili = b.id_polsek
+
+JOIN tb_status as c
+on a.stat_org = c.id_status");
 
 
 ?>
@@ -70,11 +73,11 @@ ON b.polsek = b.id");
                         <tbody>
                             <?php foreach ($data as $row): ?>
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row"><?= $row['id_orang'] ?></th>
                                     <td><?= $row['nama'] ?></td>
                                     <td><?= $row['kejahatan'] ?></td>
                                     <td><?= $row['polsek'] ?></td>
-                                    <td><?= $row['status'] ?></td>
+                                    <td><?= $row['stat'] ?></td>
                                     <td><?= $row['tgl_cari'] ?></td>
 
                                 </tr>
