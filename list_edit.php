@@ -49,37 +49,39 @@
                 <h1>Daftar Pencarian Orang</h1>
 
                 <!-- start of table  -->
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Pengaturan</th>
-                            <th scope="col">Nomor</th>
-                            <th scope="col">Nama Orang</th>
-                            <th scope="col">Kejahatan</th>
-                            <th scope="col">Polsek</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Waktu Hilang/Ditemukan</th>
-                        </tr>
-                    </thead>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pengaturan</th>
+                                <th scope="col">Nomor</th>
+                                <th scope="col">Nama Orang</th>
+                                <th scope="col">Kejahatan</th>
+                                <th scope="col">Polsek</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Waktu Hilang/Ditemukan</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
+                        <tbody>
 
-                        <tr>
-                            <th scope="row">
-                           <a href="#" class="btn btn-info">Ubah</a> 
-                           <a href="#" class="btn btn-danger">Hapus</a> 
-                            </th>
-                        </tr>
-                        <tr>
-                            
+                            <tr>
+                                <th scope="row">
+                                    <a href="./data_edit.php" class="btn btn-info m-2">Ubah</a>
+                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                </th>
+                            </tr>
+                            <tr>
 
-                        </tr>
-                        <tr>
-                            
 
-                        </tr>
-                    </tbody>
-                </table>
+                            </tr>
+                            <tr>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <!-- end of table -->
 
             </div>
@@ -87,47 +89,7 @@
     </div>
     <!-- end of content -->
 
-    <!-- start of footer -->
-    <footer class="text-center bg-body-dark custom-footer">
-        <!-- Grid container -->
-        <div class="container pt-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a
-                    data-mdb-ripple-init
-                    class="btn btn-link btn-floating btn-lg text-body m-1"
-                    href="#!"
-                    role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-facebook-f" style="color: white;"></i></a>
-
-                <!-- Twitter -->
-                <a
-                    data-mdb-ripple-init
-                    class="btn btn-link btn-floating btn-lg text-body m-1"
-                    href="#!"
-                    role="button"
-                    data-mdb-ripple-color="light"><i class="fa-brands fa-x-twitter" style="color: white;"></i></a>
-
-                <!-- Instagram -->
-                <a
-                    data-mdb-ripple-init
-                    class="btn btn-link btn-floating btn-lg text-body m-1"
-                    href="#!"
-                    role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-instagram" style="color: white;"></i></a>
-            </section>
-            <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            &copy; 2024 Copyright Kepolisian Indonesia
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- end of footer -->
+    
 
 
     <!-- start of script -->

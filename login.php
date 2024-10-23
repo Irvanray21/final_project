@@ -63,9 +63,9 @@
     <!-- end of login form -->
 
     <!-- start of footer -->
-    <footer class="custom-footer fixed-bottom">
+    <!-- <footer class="custom-footer fixed-bottom">
         <span>&copy;2024 Kepolisian Indonesia</span>
-    </footer>
+    </footer> -->
     <!-- end of footer -->
 </body>
 
