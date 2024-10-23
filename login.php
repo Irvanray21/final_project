@@ -43,6 +43,7 @@
     <div class="container-fluid">
         <div class="card mt-5 p-5">
             <div class="card-body">
+                <h1 style="text-align: center;">Silahkan Log-in</h1>
                 <div class="d-flex justify-content-center text-center">
                     <form method="post">
                         <div class="form-floating mb-3">
