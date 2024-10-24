@@ -27,14 +27,14 @@ if (!isset($_SESSION['username'])) {
     <!-- start of navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="./index-in.html">
                 <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
                 Kepolisian Indonesia
             </a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="./logout.php">Log-out</a>
+                        <a class="nav-link" href="./dashboard.php">Log-out</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                    <a href="logout.php" class="btn btn-primary" type="button">Ya</a>
+                    <a href="./logout.php" class="btn btn-primary" type="button">Ya</a>
                 </div>
             </div>
         </div>
