@@ -1,4 +1,5 @@
 <?php
+require 'config.php';
 
 ?>
 
@@ -48,7 +49,7 @@
                         <h5 class="card-title text-center mb-5 fw-bold">Silahkan Log-in Terlebih Dahulu</h5>
                         <form>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="txt_username" placeholder="Username Disini">
+                                <input type="text" class="form-control" id="txt_username" placeholder="Username Disini">
                                 <label for="txt_username">Username Disini</label>
                             </div>
                             <div class="form-floating mb-3">

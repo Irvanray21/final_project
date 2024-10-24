@@ -1,15 +1,5 @@
 <?php
 require 'config.php';
-
-$data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, b.polsek, c.stat
-From tb_orang as a
-JOIN tb_polsek as b
-ON a.domisili = b.id_polsek
-
-JOIN tb_status as c
-on a.stat_org = c.id_status");
-
-
 ?>
 
 <!doctype html>
