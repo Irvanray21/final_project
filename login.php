@@ -1,6 +1,37 @@
 <?php
 require 'config.php';
 
+//starting the session
+session_start();
+
+if (isset($_SESSION['username'])) {
+    header("location: dashboard.php");
+    exit();
+}
+
+$user = [
+    'polisi1' => 'jedarjedur',
+    'admin1' => 'notadmin'
+];
+
+
+if (isset($_POST['submit_login'])) {
+
+    //get data global from $_post variable
+    $username = $_POST['txt_username'];
+    $password = $_POST['txt_password'];
+
+    if (isset($user[$username]) && ($user[$username]) === $password) {
+        //true
+        $_SESSION['username'] = $username;
+        header("location: dashboard.php");
+        exit();
+    } else {
+        //false
+        $err = "Password atau Username salah.";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +69,9 @@ require 'config.php';
         </div>
     </nav>
     <!-- end of navbar -->
-
+    <?php if (isset($err)): ?>
+        <p style="color: red; margin-bottom: 16px"><?= $err; ?></p>
+    <?php endif; ?>
     <!-- Login form -->
 
     <div class="container-fluid">
@@ -47,27 +80,27 @@ require 'config.php';
                 <div class="card my-5">
                     <div class="card-body p-4 p-sm-5">
                         <h5 class="card-title text-center mb-5 fw-bold">Silahkan Log-in Terlebih Dahulu</h5>
-                        <form>
+                        <form method="POST">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="txt_username" placeholder="Username Disini">
+                                <input type="text" class="form-control" name="txt_username" placeholder="Username Disini">
                                 <label for="txt_username">Username Disini</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="txt_password" placeholder="Password Disini">
+                                <input type="password" class="form-control" name="txt_password" placeholder="Password Disini">
                                 <label for="txt_password">Password Disini</label>
                             </div>
 
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-login text-uppercase fw-bold" 
-                                type="submit">Login</button>
+                                <button class="btn btn-primary btn-login text-uppercase fw-bold"
+                                    type="submit" name="submit_login">Login</button>
                             </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
     <!-- end of login form -->
 

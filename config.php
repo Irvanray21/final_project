@@ -38,32 +38,6 @@ function myquery($query)
     return $returns;
 }
 
-//update data
-
-function update ($data)
-{
-    global $connection;
-
-    $nama = $connection -> real_escape_string($data['dpo_nama']);
-    $dosa =  $data['dpo_dosa'];
-    $polsek = $data['dpo_polsek'];
-    $status = $data['dpo_status'];
-    $tgl = $data['dpo_date'];
-
-$query = "UPDATE tb_orang SET
-nama = '$nama',
-kejahatan = '$dosa',
-domisili = '$polsek',
-stat_org = '$status',
-tgl_cari = '$tgl'
-WHERE id = $id
-
-";
-
-    mysqli_query($connection, $query);
-    return mysqli_affected_rows($connection);
-}
-
 
 
 ?>
