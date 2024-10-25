@@ -1,6 +1,5 @@
 <?php
-
-
+require 'config.php';
 
 ?>
 
@@ -53,24 +52,35 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">Pengaturan</th>
                                 <th scope="col">Nomor</th>
                                 <th scope="col">Nama Orang</th>
                                 <th scope="col">Kejahatan</th>
                                 <th scope="col">Polsek</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Waktu Hilang/Ditemukan</th>
+                                <th scope="col">Pengaturan</th>
                             </tr>
                         </thead>
 
                         <tbody>
-
+                        <?php foreach ($data as $row): ?>
                             <tr>
-                                <th scope="row">
+                                <th scope="row"><?= $row['id_orang'] ?></th>
+                                    <td><?= $row['nama'] ?></td>
+                                    <td><?= $row['kejahatan'] ?></td>
+                                    <td><?= $row['polsek'] ?></td>
+                                    <td><?= $row['stat'] ?></td>
+                                    <td><?= $row['tgl_cari'] ?></td>
+                                    <td>
+                                        <a href="data_edit.php?id=<?= $row['id_orang'] ?>" class="btn btn-primary">Edit</a>
+                                        <a href="function.php?action=delete&id=<?= $row['id_orang'] ?>" class="btn btn-danger">Hapus</a>
+                                    </td>
+                                <!-- <th scope="row">
                                     <a href="./data_edit.php" class="btn btn-info m-2">Ubah</a>
                                     <a href="#" class="btn btn-danger">Hapus</a>
-                                </th>
-                            </tr>
+                                </th> -->
+                                </tr>
+                            <?php endforeach; ?>
                             <tr>
 
 
@@ -83,7 +93,7 @@
                     </table>
                 </div>
                 <!-- end of table -->
-
+                <a href="add_data.php" class="btn btn-success" role="button">Tambah Orang</a>
             </div>
         </div>
     </div>

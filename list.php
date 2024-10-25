@@ -51,7 +51,7 @@ require 'config.php';
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">Nomor</th>
+
                                 <th scope="col">Nama Orang</th>
                                 <th scope="col">Kejahatan</th>
                                 <th scope="col">Polsek</th>
@@ -63,7 +63,7 @@ require 'config.php';
                         <tbody>
                             <?php foreach ($data as $row): ?>
                                 <tr>
-                                    <th scope="row"><?= $row['id_orang'] ?></th>
+
                                     <td><?= $row['nama'] ?></td>
                                     <td><?= $row['kejahatan'] ?></td>
                                     <td><?= $row['polsek'] ?></td>
