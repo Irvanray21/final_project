@@ -6,16 +6,29 @@ body {
 body {
   margin: 0%;
   padding: 0%;
+  background-color: ghostwhite;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .custom-navbar {
   background-color: #142c5c;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  list-style: none;
 }
 
 .custom-navbar a {
   color: ghostwhite;
   font-size: 25px;
+
 }
+
 
 .custom-navbar a:hover {
   color: khaki;
@@ -31,25 +44,29 @@ body {
   position: relative;
 }
 
-thead, tbody{
-  text-align: center;
-}
-
-.col-sm-12 > h1{
+.col-sm-12 > h1 {
   text-align: center;
   padding: 1%;
 }
+
+.table {
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid;
+}
+
 .btn-login {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
   padding: 0.75rem 1rem;
 }
 
-/* .custom-footer {
-  background-color: #232f3a;
-  color: whitesmoke;
-  justify-content: center;
-  width: 100%;
+.footer {
+  margin-top: 80px;
+  margin-bottom: 120px;
   text-align: center;
-  padding: 0%;
-} */
+  font-size: 15pt;
+}

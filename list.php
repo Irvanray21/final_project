@@ -22,11 +22,11 @@ require 'config.php';
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
-                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="loo">
+                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="gambar">
                 Kepolisian Indonesia
             </a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-2">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-2 ">
                     <li class="nav-item">
                         <a class="nav-link" href="./list.php">Daftar Orang</a>
                     </li>
@@ -84,7 +84,9 @@ require 'config.php';
     <!-- end of content -->
 
 
-
+    <div class="footer">
+		&copy; Kepolisian Indonesia 2024
+	</div>
 
     <!-- start of script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

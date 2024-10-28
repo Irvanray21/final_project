@@ -1,4 +1,8 @@
 <?php
+
+if(!ISSET($flag)){
+    require 'connection.php';
+}
 // insert to table section
 $data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, b.polsek, c.stat
 From tb_orang as a
@@ -10,9 +14,9 @@ on a.stat_org = c.id_status");
 
 
 // $_get section
-if (isset($_GET['action']) && isset($_GET['id_orang'])) {
+if (isset($_GET['action']) && isset($_GET['id'])) {
     $action = $_GET['action'];
-    $id = $_GET['id_orang'];
+    $id = $_GET['id'];
 
     switch ($action) {
         case 'delete':
@@ -69,3 +73,5 @@ function delete_data($id)
         exit();
     }
 }
+
+?>

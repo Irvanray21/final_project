@@ -75,10 +75,7 @@ require 'config.php';
                                         <a href="data_edit.php?id=<?= $row['id_orang'] ?>" class="btn btn-primary">Edit</a>
                                         <a href="function.php?action=delete&id=<?= $row['id_orang'] ?>" class="btn btn-danger">Hapus</a>
                                     </td>
-                                <!-- <th scope="row">
-                                    <a href="./data_edit.php" class="btn btn-info m-2">Ubah</a>
-                                    <a href="#" class="btn btn-danger">Hapus</a>
-                                </th> -->
+
                                 </tr>
                             <?php endforeach; ?>
                             <tr>
@@ -91,7 +88,7 @@ require 'config.php';
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </div><br/>
                 <!-- end of table -->
                 <a href="add_data.php" class="btn btn-success" role="button">Tambah Orang</a>
             </div>
