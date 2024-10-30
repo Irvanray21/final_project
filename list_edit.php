@@ -1,6 +1,14 @@
 <?php
-require 'config.php';
+require 'connection.php';
 
+// insert to table section
+$data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, b.polsek, c.stat
+From tb_orang as a
+JOIN tb_polsek as b
+ON a.domisili = b.id_polsek
+
+JOIN tb_status as c
+on a.stat_org = c.id_status");
 ?>
 
 <!doctype html>
@@ -22,26 +30,24 @@ require 'config.php';
     <!-- start of navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index-in.html">
-                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
-                Kepolisian Indonesia
+            <a href="./index-in.html" class="navbar-brand">
+                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Indonesia
             </a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./list_edit.php">Ubah Daftar Orang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./dashboard.php">Log-out</a>
-                    </li>
-                </ul>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="./list_edit.php" class="nav-item nav-link">Edit Data</a>
+                    <a href="./dashboard.php" class="nav-item nav-link">Dashboard</a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- end of navbar -->
 
     <!-- start of content -->
-    <div class="container-fluid">
+    <div class="content-section">
         <div class="row">
             <div class="col-sm-12">
 
@@ -63,9 +69,9 @@ require 'config.php';
                         </thead>
 
                         <tbody>
-                        <?php foreach ($data as $row): ?>
-                            <tr>
-                                <th scope="row"><?= $row['id_orang'] ?></th>
+                            <?php foreach ($data as $row): ?>
+                                <tr>
+                                    <th scope="row"><?= $row['id_orang'] ?></th>
                                     <td><?= $row['nama'] ?></td>
                                     <td><?= $row['kejahatan'] ?></td>
                                     <td><?= $row['polsek'] ?></td>
@@ -73,30 +79,32 @@ require 'config.php';
                                     <td><?= $row['tgl_cari'] ?></td>
                                     <td>
                                         <a href="data_edit.php?id=<?= $row['id_orang'] ?>" class="btn btn-primary">Edit</a>
-                                        <a href="function.php?action=delete&id=<?= $row['id_orang'] ?>" class="btn btn-danger">Hapus</a>
+                                        <a href="function.php?action=delete&id_orang=<?= $row['id_orang'] ?>" class="btn btn-danger" onClick="return confirm('Yakin akan menghapus?')">Hapus</a>
                                     </td>
 
                                 </tr>
                             <?php endforeach; ?>
-                            <tr>
-
-
-                            </tr>
-                            <tr>
-
-
-                            </tr>
                         </tbody>
                     </table>
-                </div><br/>
+                </div>
                 <!-- end of table -->
-                <a href="add_data.php" class="btn btn-success" role="button">Tambah Orang</a>
+                <div class="d-flex justify-content-center">
+                    <a href="add_data.php" class="btn btn-success mb-3" role="button">Tambah Orang</a>
+                </div>
             </div>
         </div>
     </div>
     <!-- end of content -->
 
-    
+    <!-- start of footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color:  #142c5c;">
+            &copy; 2024 Kepolisian Indonesia
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- end of footer -->
 
 
     <!-- start of script -->

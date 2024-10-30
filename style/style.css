@@ -1,3 +1,8 @@
+:root {
+  --navbar-height: 56px;
+  --footer-height: 72px;
+}
+
 html,
 body {
   height: 100%;
@@ -21,6 +26,7 @@ body {
   height: auto;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   list-style: none;
+  min-height: var(--navbar-height);
 }
 
 .custom-navbar a {
@@ -44,9 +50,16 @@ body {
   position: relative;
 }
 
+.content-section {
+  min-height: calc(100% - var(--navbar-height));
+}
+
 .col-sm-12 > h1 {
   text-align: center;
   padding: 1%;
+}
+.col-12{
+  text-align: center;
 }
 
 .table {
@@ -64,9 +77,26 @@ td {
   padding: 0.75rem 1rem;
 }
 
-.footer {
-  margin-top: 80px;
-  margin-bottom: 120px;
-  text-align: center;
-  font-size: 15pt;
+.social-item{
+  margin-top: 15px;
+}
+
+.social-item > a {
+  color: whitesmoke;
+  border: 1px solid black;
+  padding: 9px 12px;
+  border-radius: 8px;
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.social-item > a:hover{
+  color:  wheat;
+}
+
+.dt-search {
+  display: none;
+  text-align: right;
 }

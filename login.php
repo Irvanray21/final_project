@@ -1,5 +1,4 @@
 <?php
-require 'config.php';
 
 //starting the session
 session_start();
@@ -52,19 +51,17 @@ if (isset($_POST['submit_login'])) {
     <!-- start of navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">
-                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
-                Kepolisian Indonesia
+            <a href="./index.html" class="navbar-brand">
+                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Indonesia
             </a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./list.php">Daftar Orang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.php">Log-in</a>
-                    </li>
-                </ul>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="./list.php" class="nav-item nav-link">Daftar Orang</a>
+                    <a href="./login.php" class="nav-item nav-link">Login</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -105,9 +102,13 @@ if (isset($_POST['submit_login'])) {
     <!-- end of login form -->
 
     <!-- start of footer -->
-    <!-- <footer class="custom-footer fixed-bottom">
-        <span>&copy;2024 Kepolisian Indonesia</span>
-    </footer> -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color:  #142c5c;">
+            &copy; 2024 Kepolisian Indonesia
+        </div>
+        <!-- Copyright -->
+    </footer>
     <!-- end of footer -->
 </body>
 

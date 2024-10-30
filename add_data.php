@@ -1,6 +1,6 @@
 <?php
 //edit section
-require 'config.php';
+require 'connection.php';
 
 
 $data_polsek = myquery("SELECT * FROM tb_polsek");
@@ -47,26 +47,24 @@ if (isset($_POST['dpo_submit'])) {
     <!-- start of navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index-in.html">
-                <img src="./media/logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
-                Kepolisian Indonesia
+            <a href="./index-in.html" class="navbar-brand">
+                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Indonesia
             </a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./list_edit.php">Ubah Daftar Orang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./dashboard.php">Log-out</a>
-                    </li>
-                </ul>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="./list_edit.php" class="nav-item nav-link">Edit Data</a>
+                    <a href="./dashboard.php" class="nav-item nav-link">Dashboard</a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- end of navbar -->
 
     <!-- edit form -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
 
@@ -97,11 +95,11 @@ if (isset($_POST['dpo_submit'])) {
                             <div class="mb-3">
                                 <label>Polsek</label>
                                 <select class="form-control" type="text" name="dpo_polsek">
-                                <?php foreach ($data_polsek as $option): ?>
-                                    <option value="<?= $option['id_polsek'] ?>">
-                                        <?= $option['polsek'] ?>
-                                    </option>
-                                <?php endforeach; ?>
+                                    <?php foreach ($data_polsek as $option): ?>
+                                        <option value="<?= $option['id_polsek'] ?>">
+                                            <?= $option['polsek'] ?>
+                                        </option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
 
@@ -138,13 +136,17 @@ if (isset($_POST['dpo_submit'])) {
         </div>
         <a href="./list_edit.php" class="btn btn-warning mt-3">Kembali</a>
     </div>
-    
+
     <!-- end of edit form -->
 
     <!-- start of footer -->
-    <!-- <footer class="custom-footer fixed-bottom">
-        <span>&copy;2024 Kepolisian Indonesia</span>
-    </footer> -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color:  #142c5c;">
+            &copy; 2024 Kepolisian Indonesia
+        </div>
+        <!-- Copyright -->
+    </footer>
     <!-- end of footer -->
 
     <!-- start of script -->

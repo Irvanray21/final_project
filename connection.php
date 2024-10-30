@@ -20,6 +20,4 @@ while ($data = mysqli_fetch_assoc($res)) {
     return $returns;
 }
 
-
-
 ?>

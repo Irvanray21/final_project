@@ -1,22 +1,13 @@
 <?php
 
-if(!ISSET($flag)){
-    require 'connection.php';
-}
-// insert to table section
-$data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, b.polsek, c.stat
-From tb_orang as a
-JOIN tb_polsek as b
-ON a.domisili = b.id_polsek
 
-JOIN tb_status as c
-on a.stat_org = c.id_status");
+    require 'connection.php';
 
 
 // $_get section
-if (isset($_GET['action']) && isset($_GET['id'])) {
+if (isset($_GET['action']) && isset($_GET['id_orang'])) {
     $action = $_GET['action'];
-    $id = $_GET['id'];
+    $id = $_GET['id_orang'];
 
     switch ($action) {
         case 'delete':
@@ -66,10 +57,10 @@ function delete_data($id)
 
     //if true
     if ($res) {
-        header("location: data_edit.php?messages=Berhasil Diubah");
+        header("location: list_edit.php?messages=Berhasil Diubah");
     } else {
         //if false
-        header("location: data_edit.php?messages=Gagal Diubah");
+        header("location: list_edit.php?messages=Gagal Diubah");
         exit();
     }
 }
