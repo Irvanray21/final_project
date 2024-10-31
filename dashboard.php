@@ -45,7 +45,7 @@ if (!isset($_SESSION['username'])) {
 
 
     <!-- start of dashboard -->
-    <div class="container-fluid py-3">
+    <div class="content-section py-3">
         <div class="card">
             <div class="card-body">
                 <div class="row">

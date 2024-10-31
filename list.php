@@ -50,21 +50,21 @@ on a.stat_org = c.id_status");
     <!-- end of navbar -->
 
     <!-- start of content -->
-    <div class="container-fluid">
+    <div class="content-section">
         <div class="row">
             <div class="col-sm-12">
 
                 <h1>Daftar Pencarian Orang</h1>
 
                 <div class="table-responsive">
-                    <table id="db_dpo" class="table table-striped" style="width:100%">
+                    <table id="db_dpo" class="table table-striped display" style="width:100%">
                         <thead>
                             <tr>
-                                <th scope="col">Nama Orang</th>
-                                <th scope="col">Kejahatan</th>
-                                <th scope="col">Polsek</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Waktu Hilang/Ditemukan</th>
+                                <th>Nama Orang</th>
+                                <th>Kejahatan</th>
+                                <th>Polsek</th>
+                                <th>Status</th>
+                                <th>Waktu Hilang/Ditemukan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -101,18 +101,25 @@ on a.stat_org = c.id_status");
 
     <!-- start of script -->
 
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <!-- DataTables JS -->
-        <script src="https://cdn.datatables.net/v/bs5/dt-2.1.8/datatables.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.1.8/datatables.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
     <script>
-        $('#db_dpo').DataTable();
+        $('#db_dpo').DataTable({
+            responsive: {
+                details: {
+                    type: 'column'
+                }
+            }
+
+        });
     </script>
     <!-- end of script -->
 </body>
