@@ -32,9 +32,7 @@ body {
 .custom-navbar a {
   color: ghostwhite;
   font-size: 25px;
-
 }
-
 
 .custom-navbar a:hover {
   color: khaki;
@@ -58,11 +56,7 @@ body {
   text-align: center;
   padding: 1%;
 }
-.col-12{
-  text-align: center;
-}
-
-.table {
+.col-12 {
   text-align: center;
 }
 
@@ -71,13 +65,14 @@ td {
   border: 1px solid;
 }
 
+
 .btn-login {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
   padding: 0.75rem 1rem;
 }
 
-.social-item{
+.social-item {
   margin-top: 15px;
 }
 
@@ -92,11 +87,12 @@ td {
   font-size: 15px;
 }
 
-.social-item > a:hover{
-  color:  wheat;
+.social-item > a:hover {
+  color: wheat;
 }
 
 .dt-search {
   display: none;
   text-align: right;
 }
+
