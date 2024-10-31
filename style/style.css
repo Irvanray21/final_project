@@ -99,3 +99,23 @@ td {
 footer {
   position: sticky;
 }
+
+.twitter{
+  background: linear-gradient(15deg, skyblue, midnightblue);
+  color: snow;
+}
+
+.whatsapp{
+  background: linear-gradient(25deg, limegreen, darkgreen );
+  color: snow;
+}
+
+.instagram{
+  background: linear-gradient(35deg, fuchsia, orange, gold );
+  color: snow;
+}
+
+.call{
+  background: linear-gradient(15deg, black, dimgrey);
+  color: snow;
+}
