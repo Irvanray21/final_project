@@ -77,7 +77,7 @@ on a.stat_org = c.id_status");
                                     <td><?= $row['polsek'] ?></td>
                                     <td><?= $row['stat'] ?></td>
                                     <td><?= $row['tgl_cari'] ?></td>
-                                    <td><?= $row['foto'] ?></td>
+                                    <td><img src="photo/<?= $row['foto'] ?>" alt="Photo" style="width: 100px; height: auto;" /></td>
 
                                 </tr>
                             <?php endforeach; ?>

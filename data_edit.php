@@ -116,19 +116,20 @@ if (isset($_POST['dpo_update'])) {
                                 <div class="form-group">
                                     <input type="file" name="uploadfile" />
                                 </div>
-                                <br />
-                                <div class="mb-3">
-                                    <label>Waktu Hilang/Ditemukan</label>
-                                    <input class="form-control" type="date" name="dpo_date"
-                                        autocomplete="off" value="<?php echo $data_orang[0]['tgl_cari'] ?>" />
-                                </div>
+                            </div>
 
-                                <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary"
-                                        name="dpo_update">
-                                        Mutasi Data
-                                    </button>
-                                </div>
+                            <div class="mb-3">
+                                <label>Waktu Hilang/Ditemukan</label>
+                                <input class="form-control" type="date" name="dpo_date"
+                                    autocomplete="off" value="<?php echo $data_orang[0]['tgl_cari'] ?>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary"
+                                    name="dpo_update">
+                                    Mutasi Data
+                                </button>
+                            </div>
                         </form>
 
                     </div>
@@ -136,7 +137,7 @@ if (isset($_POST['dpo_update'])) {
             </div>
         </div>
     </div>
-    <a href="./list_edit.php" class="btn btn-warning mt-3">Kembali</a>
+    <a href="./list_edit.php" class="btn btn-warning mt-1 ">Kembali</a>
     </div>
     <!-- end of edit form -->
 

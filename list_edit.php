@@ -78,7 +78,7 @@ on a.stat_org = c.id_status");
                                     <td><?= $row['polsek'] ?></td>
                                     <td><?= $row['stat'] ?></td>
                                     <td><?= $row['tgl_cari'] ?></td>
-                                    <td><?= $row['foto'] ?></td>
+                                    <td><img src="photo/<?= $row['foto'] ?>" alt="Photo" style="width: 100px; height: auto;" /></td>
                                     <td>
                                         <a href="data_edit.php?id=<?= $row['id_orang'] ?>" class="btn btn-primary">Edit</a>
                                         <a href="function.php?action=delete&id_orang=<?= $row['id_orang'] ?>" class="btn btn-danger" onClick="return confirm('Yakin akan menghapus?')">Hapus</a>

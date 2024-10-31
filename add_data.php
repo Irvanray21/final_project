@@ -11,11 +11,12 @@ if (isset($_POST['dpo_submit'])) {
     $dosa = $_POST['dpo_dosa'];
     $polsek = $_POST['dpo_polsek'];
     $status = $_POST['dpo_status'];
+    $foto = $_POST['dpo_foto'];
     $date = $_POST['dpo_date'];
 
     /// Insert
-    $query_insert = "INSERT INTO tb_orang(nama, kejahatan, domisili, stat_org, tgl_cari)
-    VALUE ('$nama', '$dosa', '$polsek', '$status', '$date')";
+    $query_insert = "INSERT INTO tb_orang(nama, kejahatan, domisili, stat_org, foto, tgl_cari)
+    VALUE ('$nama', '$dosa', '$polsek', '$status', '$foto', '$date')";
 
     $res = mysqli_query($connection, $query_insert);
 
@@ -120,6 +121,16 @@ if (isset($_POST['dpo_submit'])) {
                                 <input class="form-control" type="date" name="dpo_date"
                                     autocomplete="off" />
                             </div>
+
+                            <div class="mb-3">
+                                <label>Foto Orang</label><br/>
+                                <div class="form-group">
+                                    <input type="file" name="dpo_foto"/>
+                                </div>
+                            </div>
+
+                            <br/>
+                            <br/>
 
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary"
