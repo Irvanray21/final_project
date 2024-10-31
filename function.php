@@ -1,7 +1,7 @@
 <?php
 
 
-    require 'connection.php';
+require 'connection.php';
 
 
 // $_get section
@@ -23,10 +23,21 @@ if (isset($_GET['action']) && isset($_GET['id_orang'])) {
     echo "";
 }
 
+
+
 // update section
-function update($data)
+function update($data, $data_files)
 {
+    // var_dump($data_files);
+    // die();
+
+
     global $connection;
+
+    $filename = $data_files["uploadfile"]["name"];
+    $tempname = $data_files["uploadfile"]["tmp_name"];
+    $folder = "./photo/" . $filename;
+
 
     $id = $data['id_orang'];
     $nama = $data['dpo_nama'];
@@ -34,6 +45,7 @@ function update($data)
     $polsek = $data['dpo_polsek'];
     $status = $data['dpo_status'];
     $date = $data['dpo_date'];
+    $foto = $data['dpo_foto'];
 
 
     $query = "UPDATE tb_orang SET      
@@ -41,12 +53,17 @@ function update($data)
         kejahatan = '$dosa',
         domisili = '$polsek',
         stat_org = '$status',
-        tgl_cari = '$date'
+        tgl_cari = '$date',
+        foto = '$filename'
         WHERE id_orang = '$id'
         ";
 
-    mysqli_query($connection, $query);
-    return mysqli_affected_rows($connection);
+    if (move_uploaded_file($tempname, $folder)) {
+        $cek_result = mysqli_query($connection, $query);
+        return mysqli_affected_rows($connection);
+    } else {
+        return false;
+    }
 }
 
 // delete section
@@ -64,5 +81,3 @@ function delete_data($id)
         exit();
     }
 }
-
-?>

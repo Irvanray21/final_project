@@ -12,7 +12,7 @@ $data_polsek = myquery("SELECT * FROM tb_polsek");
 $data_status = myquery("SELECT * FROM tb_status");
 
 if (isset($_POST['dpo_update'])) {
-    if (update($_POST) > 0) {
+    if (update($_POST, $_FILES) > 0) {
         echo "<script> 
             alert('Data berhasil diubah');
             document.location.href = 'list_edit.php';
@@ -73,7 +73,7 @@ if (isset($_POST['dpo_update'])) {
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="post">
+                        <form method="post" enctype="multipart/form-data">
                             <input type="hidden" value="<?= $id ?>" name="id_orang" />
                             <div class="mb-3">
                                 <label>Nama</label>
@@ -111,27 +111,32 @@ if (isset($_POST['dpo_update'])) {
                                 </select>
                             </div>
 
-
                             <div class="mb-3">
-                                <label>Waktu Hilang/Ditemukan</label>
-                                <input class="form-control" type="date" name="dpo_date"
-                                    autocomplete="off" value="<?php echo $data_orang[0]['tgl_cari'] ?>" />
-                            </div>
+                                <label>Foto Orang</label><br />
+                                <div class="form-group">
+                                    <input type="file" name="uploadfile" />
+                                </div>
+                                <br />
+                                <div class="mb-3">
+                                    <label>Waktu Hilang/Ditemukan</label>
+                                    <input class="form-control" type="date" name="dpo_date"
+                                        autocomplete="off" value="<?php echo $data_orang[0]['tgl_cari'] ?>" />
+                                </div>
 
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-primary"
-                                    name="dpo_update">
-                                    Mutasi Data
-                                </button>
-                            </div>
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary"
+                                        name="dpo_update">
+                                        Mutasi Data
+                                    </button>
+                                </div>
                         </form>
 
                     </div>
                 </div>
-
             </div>
         </div>
-        <a href="./list_edit.php" class="btn btn-warning mt-3">Kembali</a>
+    </div>
+    <a href="./list_edit.php" class="btn btn-warning mt-3">Kembali</a>
     </div>
     <!-- end of edit form -->
 

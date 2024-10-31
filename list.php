@@ -2,7 +2,7 @@
 require 'connection.php';
 
 // insert to table section
-$data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, b.polsek, c.stat
+$data = myquery("SELECT a.id_orang, a.nama, a.kejahatan, a.tgl_cari, a.foto, b.polsek, c.stat
 From tb_orang as a
 JOIN tb_polsek as b
 ON a.domisili = b.id_polsek
@@ -65,6 +65,7 @@ on a.stat_org = c.id_status");
                                 <th>Polsek</th>
                                 <th>Status</th>
                                 <th>Waktu Hilang/Ditemukan</th>
+                                <th>Foto Orang</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,6 +77,7 @@ on a.stat_org = c.id_status");
                                     <td><?= $row['polsek'] ?></td>
                                     <td><?= $row['stat'] ?></td>
                                     <td><?= $row['tgl_cari'] ?></td>
+                                    <td><?= $row['foto'] ?></td>
 
                                 </tr>
                             <?php endforeach; ?>
