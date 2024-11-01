@@ -14,6 +14,47 @@ if (isset($_POST['dpo_submit'])) {
     $foto = $_POST['dpo_foto'];
     $date = $_POST['dpo_date'];
 
+
+    //direktori foto
+    $foto = $_FILES['dpo_foto']['name'];
+    $target_dir = "photo/"; // 
+    $target_file = $target_dir . basename($foto);
+    $uploadOk = 1;
+
+    //foto check
+    $check = getimagesize($_FILES['dpo_foto']['tmp_name']);
+    if ($check === false) {
+        $err = "File is not an image.";
+        $uploadOk = 0;
+    }
+
+    //ukuran size 
+    if ($_FILES['dpo_foto']['size'] > 500000) {
+        $err = "Maaf, ukuran maksimal 500KB";
+        $uploadOk = 0;
+    }
+
+    //upload foto
+    if ($uploadOk == 1) {
+        if (move_uploaded_file($_FILES['dpo_foto']['tmp_name'], $target_file)) {
+            // Insert into database
+            $query_insert = "INSERT INTO tb_orang(nama, kejahatan, domisili, stat_org, foto, tgl_cari)
+            VALUES ('$nama', '$dosa', '$polsek', '$status', '$foto', '$date')";
+
+            $res = mysqli_query($connection, $query_insert);
+
+            if ($res) {
+                header("Location: list_edit.php");
+                exit();
+            } else {
+                $err = "Data gagal di input";
+            }
+        } else {
+            $err = "Sorry, there was an error uploading your file.";
+        }
+    }
+
+
     /// Insert
     $query_insert = "INSERT INTO tb_orang(nama, kejahatan, domisili, stat_org, foto, tgl_cari)
     VALUE ('$nama', '$dosa', '$polsek', '$status', '$foto', '$date')";
@@ -78,7 +119,7 @@ if (isset($_POST['dpo_submit'])) {
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="post">
+                        <form method="post" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label>Nama</label>
                                 <input class="form-control" type="text" name="dpo_nama"
@@ -123,14 +164,14 @@ if (isset($_POST['dpo_submit'])) {
                             </div>
 
                             <div class="mb-3">
-                                <label>Foto Orang</label><br/>
+                                <label>Foto Orang</label><br />
                                 <div class="form-group">
-                                    <input type="file" name="dpo_foto"/>
+                                    <input type="file" name="dpo_foto" required />
                                 </div>
                             </div>
 
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
 
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary"
