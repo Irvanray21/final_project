@@ -56,9 +56,6 @@ body {
   text-align: center;
   padding: 1%;
 }
-.col-12 {
-  text-align: center;
-}
 
 th,
 td {
@@ -66,7 +63,7 @@ td {
 }
 
 thead,
-th {
+th, td {
   text-align: center;
 }
 
