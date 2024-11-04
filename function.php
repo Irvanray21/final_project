@@ -24,20 +24,14 @@ if (isset($_GET['action']) && isset($_GET['id_orang'])) {
 }
 
 
-
 // update section
 function update($data, $data_files)
 {
-    // var_dump($data_files);
-    // die();
-
-
     global $connection;
 
     $filename = $data_files["uploadfile"]["name"];
     $tempname = $data_files["uploadfile"]["tmp_name"];
     $folder = "./photo/" . $filename;
-
 
     $id = $data['id_orang'];
     $nama = $data['dpo_nama'];
@@ -45,26 +39,44 @@ function update($data, $data_files)
     $polsek = $data['dpo_polsek'];
     $status = $data['dpo_status'];
     $date = $data['dpo_date'];
-    $foto = $data['dpo_foto'];
 
+    // file check
+    $foto = isset($data['dpo_foto']) ? $data['dpo_foto'] : null;
 
-    $query = "UPDATE tb_orang SET      
-        nama = '$nama',
-        kejahatan = '$dosa',
-        domisili = '$polsek',
-        stat_org = '$status',
-        tgl_cari = '$date',
-        foto = '$filename'
-        WHERE id_orang = '$id'
-        ";
-
-    if (move_uploaded_file($tempname, $folder)) {
-        $cek_result = mysqli_query($connection, $query);
-        return mysqli_affected_rows($connection);
+    if ($filename) {
+        // update with photo
+        if (move_uploaded_file($tempname, $folder)) {
+            $query = "UPDATE tb_orang SET      
+                nama = '$nama',
+                kejahatan = '$dosa',
+                domisili = '$polsek',
+                stat_org = '$status',
+                tgl_cari = '$date',
+                foto = '$filename'
+                WHERE id_orang = '$id'";
+        } else {
+            return "Gagal meng-upload file";
+        }
     } else {
-        return false;
+        // update without photo
+        $query = "UPDATE tb_orang SET      
+            nama = '$nama',
+            kejahatan = '$dosa',
+            domisili = '$polsek',
+            stat_org = '$status',
+            tgl_cari = '$date'
+            WHERE id_orang = '$id'";
     }
+
+    // return query
+    $cek_result = mysqli_query($connection, $query);
+    if (!$cek_result) {
+        return "Query error: " . mysqli_error($connection);
+    }
+
+    return mysqli_affected_rows($connection);
 }
+
 
 // delete section
 function delete_data($id)

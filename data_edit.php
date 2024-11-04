@@ -44,7 +44,7 @@ if (isset($_POST['dpo_update'])) {
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a href="./index-in.html" class="navbar-brand">
-                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Indonesia
+                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Kota Bandung
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -136,8 +136,8 @@ if (isset($_POST['dpo_update'])) {
                 </div>
             </div>
         </div>
-    </div>
-    <a href="./list_edit.php" class="btn btn-warning mt-1 ">Kembali</a>
+
+        <a href="./list_edit.php" class="btn btn-warning mt-1 ">Kembali</a>
     </div>
     <!-- end of edit form -->
 
@@ -145,7 +145,7 @@ if (isset($_POST['dpo_update'])) {
     <footer class="bg-dark text-center text-white">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color:  #142c5c;">
-            &copy; 2024 Kepolisian Indonesia
+            &copy; 2024 Kepolisian Kota Bandung
         </div>
         <!-- Copyright -->
     </footer>

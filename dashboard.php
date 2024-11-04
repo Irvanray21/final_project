@@ -28,13 +28,14 @@ if (!isset($_SESSION['username'])) {
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
             <a href="./index-in.html" class="navbar-brand">
-                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Indonesia
+                <img src="./media/logo.png" height="50" alt="Logo" class="d-inline-block align-top"> Kepolisian Kota Bandung
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
+                    <a href="./list_edit.php" class="nav-item nav-link">Edit Data</a>
                     <a href="./dashboard.php" class="nav-item nav-link">Dashboard</a>
                 </div>
             </div>
@@ -53,7 +54,7 @@ if (!isset($_SESSION['username'])) {
                         <h3 class="text-bold mb-4">Selamat Datang di Dashboard Halaman</h3>
                         <hr class="mt-5 mb-3" />
                         <h4 class="text-bold mb-4" style="color: red;">PENGUMUMAN!</h4>
-                        <p style="font-weight: bolder;">Jika POLSEK anda tidak terdapat didalam list POLSEK database, harap hubungi admin di POLRESTABES atau POLRES kota anda untuk menambahkan POLSEK anda kedalam database website.</p>
+                        <p style="font-weight: bolder;">Jika POLSEK anda tidak terdapat didalam list POLSEK database, harap hubungi admin di POLRESTABES untuk menambahkan POLSEK anda kedalam database website.</p>
                     </div>
                     <div class="row">
                         <div class="col-sm-6" align="center">
@@ -106,7 +107,7 @@ if (!isset($_SESSION['username'])) {
     <footer class="bg-dark text-center text-white">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color:  #142c5c;">
-            &copy; 2024 Kepolisian Indonesia
+            &copy; 2024 Kepolisian Kota Bandung
         </div>
         <!-- Copyright -->
     </footer>
