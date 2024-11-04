@@ -65,14 +65,16 @@ td {
   border: 1px solid;
 }
 
-thead, th {
-  text-align: center;}
-
-#db_dpo thead,
-#db_dpo th {
+thead,
+th {
   text-align: center;
 }
 
+#db_dpo thead,
+#db_dpo th,
+#db_dpo td {
+  text-align: center;
+}
 
 .btn-login {
   font-size: 0.9rem;
@@ -108,22 +110,22 @@ footer {
   position: sticky;
 }
 
-.twitter{
+.twitter {
   background: linear-gradient(15deg, skyblue, midnightblue);
   color: snow;
 }
 
-.whatsapp{
-  background: linear-gradient(25deg, limegreen, darkgreen );
+.whatsapp {
+  background: linear-gradient(25deg, limegreen, darkgreen);
   color: snow;
 }
 
-.instagram{
-  background: linear-gradient(35deg, fuchsia, orange, gold );
+.instagram {
+  background: linear-gradient(35deg, fuchsia, orange, gold);
   color: snow;
 }
 
-.call{
+.call {
   background: linear-gradient(15deg, black, dimgrey);
   color: snow;
 }

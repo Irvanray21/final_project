@@ -118,7 +118,6 @@ on a.stat_org = c.id_status");
                     type: 'column'
                 }
             }
-
         });
     </script>
     <!-- end of script -->
